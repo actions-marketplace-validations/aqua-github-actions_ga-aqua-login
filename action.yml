@@ -1,0 +1,19 @@
+name: 'Aqua Login'
+description: 'Log in to aqua saas instance.'
+inputs:
+  aqua-base-url:  # id of input
+    description: 'Base url for aqua rest api'
+    required: true
+    default: 'https://aqua-saas2.andagon.com/aquaWebNG/api'
+  aqua-username:
+    description: 'username to use for login to aqua'
+    required: true
+  aqua-password:
+    description: 'password to use for login to aqua'
+    required: true
+outputs:
+  token: # id of output
+    description: 'The bear token to communicated with aqua rest api.'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
