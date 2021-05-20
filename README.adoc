@@ -1,0 +1,46 @@
+= Aqua Login
+
+Used to generate token for later use by other Aqua Actions
+
+_This github actions is inspired by https://github.com/atlassian/gajira-login[gajira-login]_
+
+== Usage
+An example workflow to login to a aqua instance:
+
+[source, yaml]
+----
+on: push
+
+name: Aqua Example
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Aqua Example
+    steps:
+    - name: Login
+      id: login
+      uses: uniqueck/ga-aqua-login@master
+      env:
+        AQUA_BASE_URL: ${{ secrets.AQUA_BASE_URL }}
+        AQUA_USERNAME: ${{ secrets.AQUA_USERNAME }}
+        AQUA_PASSWORD: ${{ secrets.AQUA_PASSWORD }}
+      with: # or as parameters
+        aqua-base-url: ${{ secrets.AQUA_BASE_URL }}
+        aqua-username: ${{ secrets.AQUA_USERNAME }}
+        aqua-password: ${{ secrets.AQUA_PASSWORD }}
+    - name: Generated bearer tokens
+      run: echo "Token ${{ steps.login.outputs.token }}"
+----
+
+== Action Spec:
+
+=== Enviroment variables
+- `AQUA_BASE_URL` - URL of aqua instance. Example: `https://aqua-saas2.andagon.com/aquaWebNG`
+- `AQUA_PASSWORD` - Password to log in to aqua.
+- `AQUA_USERNAME` - Username to log in to aqua.
+
+=== Arguments
+- `aqua-base-url` - URL of aqua instance. Example `https://aqua-saas2.andagon.com/aquaWebNG`
+- `aqua-username` - Username to log in to aqua.
+- `aqua-password` - Password to log in to aqua.

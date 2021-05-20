@@ -1,0 +1,16 @@
+on: push
+name: Test on push
+jobs:
+  aquaLogin:
+    name: Aqua login
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: login to aqua saas instance
+        id: login
+        uses: ./
+        env:
+          AQUA_USERNAME: ${{ secrets.AQUA_USERNAME }}
+          AQUA_PASSWORD: ${{ secrets.AQUA_PASSWORD }}
+      - name: Log Token
+        run: echo "Token ${{ steps.login.outputs.token }}"
