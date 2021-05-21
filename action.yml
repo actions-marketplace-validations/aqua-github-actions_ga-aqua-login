@@ -1,5 +1,5 @@
 name: 'Aqua Login'
-description: 'Log in to aqua saas instance.'
+description: 'Log in to aqua cloud instance.'
 branding:
   icon: 'bookmark'
   color: 'blue'

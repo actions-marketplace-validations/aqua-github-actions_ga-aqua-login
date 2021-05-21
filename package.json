@@ -1,7 +1,7 @@
 {
   "name": "aqua-login",
   "version": "1.0.0",
-  "description": "Used to store credentials for later use in CLI action",
+  "description": "Used to generate bearer token for later use in other github aqua actions",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
