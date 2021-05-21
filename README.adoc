@@ -1,4 +1,4 @@
-= Aqua Login
+= https://aqua-cloud.io[Aqua] Login
 
 Used to generate token for later use by other Aqua Actions
 
