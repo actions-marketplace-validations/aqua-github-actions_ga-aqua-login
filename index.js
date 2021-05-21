@@ -18,6 +18,7 @@ async function exec () {
     const result = await new Action({argv}).execute()
     if (result) {
         core.setOutput('token', result['access_token'])
+        core.setSecret(result['access_token'])
         return
     }
 
