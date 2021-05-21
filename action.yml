@@ -1,5 +1,8 @@
 name: 'Aqua Login'
 description: 'Log in to aqua saas instance.'
+branding:
+  icon: 'bookmark'
+  color: 'blue'
 inputs:
   aqua-base-url:  # id of input
     description: 'Base url for aqua rest api'
