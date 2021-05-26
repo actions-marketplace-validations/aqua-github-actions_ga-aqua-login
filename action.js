@@ -1,4 +1,4 @@
-const Aqua = require('./common/net/Aqua')
+const Aqua = require('./lib/common/Aqua')
 
 module.exports = class {
     constructor({argv}) {
