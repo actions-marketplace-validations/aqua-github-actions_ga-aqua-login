@@ -1,10 +1,10 @@
 name: 'Aqua Login'
 description: 'Log in to aqua cloud instance.'
 branding:
-  icon: 'bookmark'
+  icon: 'droplet'
   color: 'blue'
 inputs:
-  aqua-base-url:  # id of input
+  aqua-base-url:
     description: 'Base url for aqua rest api'
     required: true
     default: 'https://aqua-saas2.andagon.com/aquaWebNG/api'
@@ -15,7 +15,7 @@ inputs:
     description: 'password to use for login to aqua'
     required: true
 outputs:
-  token: # id of output
+  token:
     description: 'The bear token to communicated with aqua rest api.'
 runs:
   using: 'node12'

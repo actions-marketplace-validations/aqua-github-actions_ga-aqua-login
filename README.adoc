@@ -1,3 +1,5 @@
+:organization: aqua-github-actions
+:aqua-login-version: 1.0.1
 = https://aqua-cloud.io[Aqua] Login
 
 Used to generate token for later use by other Aqua Actions
@@ -5,9 +7,9 @@ Used to generate token for later use by other Aqua Actions
 _This github actions is inspired by https://github.com/atlassian/gajira-login[gajira-login]_
 
 == Usage
-An example workflow to login to a aqua instance:
+An example workflow to login to an aqua instance:
 
-[source, yaml]
+[source, yaml, subs=attributes]
 ----
 on: push
 
@@ -20,7 +22,7 @@ jobs:
     steps:
     - name: Login
       id: login
-      uses: uniqueck/ga-aqua-login@master
+      uses: {organization}/ga-aqua-login@{aqua-login-version}
       env:
         AQUA_BASE_URL: ${{ secrets.AQUA_BASE_URL }}
         AQUA_USERNAME: ${{ secrets.AQUA_USERNAME }}
