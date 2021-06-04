@@ -23,7 +23,7 @@ jobs:
     - name: Login
       id: login
       uses: {organization}/ga-aqua-login@{aqua-login-version}
-      env:
+      env: # secrets as env variables
         AQUA_BASE_URL: ${{ secrets.AQUA_BASE_URL }}
         AQUA_USERNAME: ${{ secrets.AQUA_USERNAME }}
         AQUA_PASSWORD: ${{ secrets.AQUA_PASSWORD }}
@@ -37,7 +37,7 @@ jobs:
 
 == Action Spec:
 
-=== Enviroment variables
+=== Environment variables
 - `AQUA_BASE_URL` - URL of aqua instance. Example: `https://aqua-saas2.andagon.com/aquaWebNG`
 - `AQUA_PASSWORD` - Password to log in to aqua.
 - `AQUA_USERNAME` - Username to log in to aqua.
